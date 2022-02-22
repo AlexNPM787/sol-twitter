@@ -15,7 +15,7 @@ pub mod solana_twitter {
         if topic.chars().count() > 50 {
             return Err(ErrorCode::TopicTooLong.into())
         }
-    
+
         if content.chars().count() > 280 {
             return Err(ErrorCode::ContentTooLong.into())
         }
