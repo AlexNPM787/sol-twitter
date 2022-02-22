@@ -36,6 +36,7 @@ pub struct SendTweet<'info> {
     #[account(mut)]
     pub author: Signer<'info>,
     #[account(address = system_program::ID)]
+    /// CHECK: This is not dangerous because we don't read or write from this account
     pub system_program: AccountInfo<'info>,
 }
 
@@ -49,7 +50,7 @@ pub struct Tweet {
 }
 
 // 2. Add some useful constants for sizing propeties.
-const DISCRIMINATOR_LENGTH: usize = 32;
+const DISCRIMINATOR_LENGTH: usize = 8;
 const PUBLIC_KEY_LENGTH: usize = 32;
 const TIMESTAMP_LENGTH: usize = 8;
 const STRING_LENGTH_PREFIX: usize = 4; // Stores the size of the string.
