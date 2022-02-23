@@ -9,6 +9,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 ```
 sh -c "$(curl -sSfL https://release.solana.com/v1.9.4/install)"
 export PATH="/home/gitpod/.local/share/solana/install/active_release/bin:$PATH"
+solana config set --url localhost
+solana-keygen new
+solana address -k target/deploy/solana_twitter-keypair.json
 ```
 
 localpubkey = 7THZBBxW5xN2sL6P4kQbL3LwKwgoJLYzK3kwb8o1csR5

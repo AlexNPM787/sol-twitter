@@ -95,7 +95,7 @@ describe("solana-twitter", () => {
           signers: [tweet],
       });
     } catch (error) {
-        // assert.equal(error.msg, 'The provided topic should be 50 characters long maximum.');
+        assert.equal(error.msg, 'The provided topic should be 50 characters long maximum.');
         return;
     }
 
@@ -115,7 +115,7 @@ describe("solana-twitter", () => {
             signers: [tweet],
         });
     } catch (error) {
-        // assert.equal(error.msg, 'The provided content should be 280 characters long maximum.');
+        assert.equal(error.msg, 'The provided content should be 280 characters long maximum.');
         return;
     }
 
